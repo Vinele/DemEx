@@ -29,6 +29,7 @@
                 <DataGridTextColumn Header="Единица" Binding="{Binding MeasureUnit}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Максимальная скидка" Binding="{Binding ProductPhoto}"></DataGridTextColumn>
 
+                
                 <DataGridTextColumn Header="Фото" Binding="{Binding ProductPhotoName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
