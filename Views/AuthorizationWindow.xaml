@@ -1,0 +1,18 @@
+﻿<Window x:Class="FabricsShop.Views.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FabricsShop.Views"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="329" MinHeight="450" MinWidth="329">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#76e383"/>
+        <Label Content="Окно авторизации" FontSize="17" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource StandardLabel}"/>
+        <Image Source="\Resources\logo.png" HorizontalAlignment="Left"/>
+    </Grid>
+</Window>
