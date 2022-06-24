@@ -37,5 +37,10 @@ namespace FabricsShop.Views
         {
             DataGridProduct.ItemsSource = RefreshData();
         }
+
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

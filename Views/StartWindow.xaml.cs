@@ -20,9 +20,12 @@ namespace FabricsShop.Views
     /// </summary>
     public partial class StartWindow : Window
     {
+        public static User currentUser;
         public StartWindow()
         {
             InitializeComponent();
+            currentUser = new User();
+            usernameLabel.Content = "Ваш статус: Гость";
         }
 
         private void productsListButton_Click(object sender, RoutedEventArgs e)
@@ -37,21 +40,19 @@ namespace FabricsShop.Views
         {
             Hide();
             RegistrationWindow registrationWindow = new RegistrationWindow();
-            DBContext dBContext = new DBContext();
+            registrationWindow.ShowDialog();
+            Show();
 
-            //registration
-            User user = new User() { UserSurname = "", UserName = "", UserPatronymic = "", UserLogin = "", UserPassword = "", UserRole = 3};
-            dBContext.User.Add(user);
-            dBContext.SaveChanges();
-            //auth
-            string login = null;
-            string password = null;
-            dBContext.User.FirstOrDefault(authUser => authUser.UserLogin == login && authUser.UserPassword == password);
+         
         }
 
         private void authButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
+            authorizationWindow.ShowDialog();
+            usernameLabel.Content = $"{currentUser.UserSurname} {currentUser.UserName} {currentUser.UserPatronymic}";
+            Show();        
         }
     }
 }

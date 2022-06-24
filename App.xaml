@@ -11,5 +11,8 @@
         <Style TargetType="Label" x:Key="StandardLabel">
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
         </Style>
+        <Style TargetType="TextBox" x:Key="StandardtextBox">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
     </Application.Resources>
 </Application>
